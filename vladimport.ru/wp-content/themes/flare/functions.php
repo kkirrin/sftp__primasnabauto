@@ -80,7 +80,10 @@ function flare_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'flare' ),
-		'top-menu' => esc_html__( 'Top Menu', 'flare' )
+		'top-menu' => esc_html__( 'Top Menu', 'flare' ),
+		'top-right' => esc_html__('Top-right-menu', 'flare'),
+		'top-left' => esc_html__('Top-left-menu', 'flare'),
+		'mobile-menu' => esc_html__('Mobile-menu', 'flare')
 	) );
 
 	/*
@@ -139,7 +142,7 @@ return $avatar_defaults;
 
 
 function flare_scripts() {
-		wp_enqueue_style( 'flare-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'flare-style', get_stylesheet_uri(),'','1.7.2' );
 		/*google fonts*/
 		wp_enqueue_style( 'flare-google-fonts', '//fonts.googleapis.com/css?family=Merriweather:300,300italic,400,400italic,700,700italic');
 
@@ -147,16 +150,16 @@ function flare_scripts() {
 	 	//  VARIABLES AND ARRAY
         $assets_url = get_template_directory_uri() .'/assets/';
         // REGISTER STYLE
-	    wp_enqueue_style( 'bootstrap', $assets_url.'css/vendor/bootstrap.min.css');
+	    wp_enqueue_style( 'bootstrap', $assets_url.'css/vendor/bootstrap.min.css', '', '1.4.3');
 	    wp_enqueue_style( 'font-awesome', $assets_url.'font-awesome/css/font-awesome.min.css', array(), '4.6.3' );
         wp_enqueue_style( 'slick', $assets_url.'css/vendor/slick.css');
         wp_enqueue_style( 'animation', $assets_url.'css/components/animation.css');
 
         // REGISTER SCRIPT
-        wp_enqueue_script( 'jquery-bootstrap', $assets_url.'js/vender/bootstrap.min.js', array('jquery'), 'v3.3.6', true );
+        wp_enqueue_script( 'jquery-bootstrap', $assets_url.'js/vender/bootstrap.min.js', array('jquery'), 'v3.3.7', true );
         wp_enqueue_script( 'jquery-slick', $assets_url.'js/vender/slick.js', array('jquery'));
 
-        wp_enqueue_script( 'jquery-wow', $assets_url.'js/vender/wow.min.js', array('jquery'), '1.1.3', true );
+        wp_enqueue_script( 'jquery-wow', $assets_url.'js/vender/wow.min.js', array('jquery'), '1.1.4', true );
         
         //ENQUEUE
         wp_enqueue_script( 'flare-main', $assets_url.'js/main.js', array('jquery'),null,true );
@@ -175,7 +178,7 @@ add_action( 'wp_enqueue_scripts', 'flare_scripts' );
 /*added admin css for meta*/
 function flare_admin_style($hook) {
 	if ( in_array( $hook, array( 'post.php', 'post-new.php' ) ) ) {
-        wp_register_style( 'flare-admin-meta-css', get_template_directory_uri() . '/assets/css/custom-meta.css',array(), ''  );
+        wp_register_style( 'flare-admin-meta-css', get_template_directory_uri() . '/assets/css/custom-meta.css',array(), '','1.2'  );
         wp_enqueue_style( 'flare-admin-meta-css' );
     }
 }
