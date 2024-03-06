@@ -47,6 +47,356 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /* Кастомные стили для редизайна */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+.eb-callback-section #eb-callback-background {
+  display: none !important;
+}
+
+#primary--main .entry-content {
+  display: none;
+}
+
+.divider-v1  {
+  display: none !important;
+}
+
+.text__order--red {
+  color: red;
+}
+
+.order__form p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* justify-content: space-around !important; */
+}
+
+
+@media(max-width:1920px) {
+  .strong-form-inner {
+    max-width: 60%;
+  }
+}
+
+@media(max-width: 480px) {
+  .strong-form-inner {
+    max-width: 100%;
+  }
+}
+
+.form-field.wpmtst-submit .wpmtst_submit_testimonial {
+  background: var(--main) !important;
+  border-radius: 4px;
+}
+
+.form-field.field-featured_image {
+  display: none;
+}
+
+.wpmtst-testimonial-inner.testimonial-inner {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+}
+
+.wpmtst-testimonial-field.testimonial-field.testimonial-name {
+  order: -1 !important;
+}
+.wpmtst-testimonial-field.testimonial-field {
+  order: -1 !important;
+} 
+
+.order__form .wpcf7-form.init .wpcf7-form-control-wrap input  {
+  border-radius: 4px;
+  background-color: var(--white);
+  width: 100%;
+  padding: 20px;
+}
+
+
+.order__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.order__container {
+  padding: 20px;
+}
+
+@media(max-width:769px) {
+  .header-accessories {
+    display: none !important;
+  }
+}
+
+.wpcf7-form-control.wpcf7-submit.has-spinner {
+  background-color: var(--main);
+  color: var(--white);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.electro__pts {
+  padding: 20px;
+}
+
+@media(max-width:1920px) {
+  .electo__container {
+    max-width: 70%;
+  }  
+}
+
+@media(max-width:480px) {
+  .electo__container {
+    max-width: 100%;
+  }
+}
+
+center a .aj_off1 {
+  background: var(--main) !important;
+  border-radius: 10px !important;
+
+}
+
+.parking__container {
+  padding: 20px;
+}
+
+.parking__map {
+  max-width: max-content;
+}
+
+@media(max-width:769px) {
+  .parking__map {
+    max-width: 100%;
+  }
+}
+.paking__gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.paking__gallery img {
+  width: 295px;
+}
+
+@media(max-width:769px) {
+  .paking__gallery img {
+    width: 350px;
+  }
+}
+
+@media(max-width:480px) {
+  .paking__gallery img {
+    width: 180px;
+  }
+}
+
+@media(max-width:375px) {
+  .paking__gallery img {
+    width: 162px;
+  }
+}
+
+
+
+.cost__list--pattern {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--white);
+}
+
+
+.cost__list {
+  max-width: 80%;
+  padding: 20px;
+}
+
+@media(max-width: 450px) {
+  .cost__list {
+    max-width: 100%;
+  }
+}
+
+
+.contact__list--page {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media(max-width:450px) {
+  .contact__list--page {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+
+._self.pt-cv-readmore.btn.btn-success {
+  background-color: var(--main);
+
+}
+
+@media(max-width: 2000px) {
+  p iframe  {
+    border-radius: 40px;
+    height: 600px;
+  }
+}
+
+@media(max-width: 1440px) {
+  p iframe  {
+    height: 600px;
+  }
+}
+
+@media(max-width: 769px) {
+  p iframe  {
+    height: 400px;
+  }
+}
+
+@media(max-width: 480px) {
+  p iframe  {
+    height: 400px;
+  }
+}
+
+
+.entry-footer {
+  display: none !important;
+}
+
+/* Обнуление стилей */
+.col-md-6.col-sm-6.col-xs-12.pt-cv-content-item.pt-cv-1-col {
+  all: initial !important;
+}
+
+/* Убирает хлебные крошки */
+.wrapper.page-inner-title {
+  display: none;
+}
+
+/* Скрытие комментариев */
+#comments {
+  display: none;
+}
+
+/* Страница для Каждой машины */
+.entry-content p {
+  text-align: start !important;
+}
+
+
+#primary--single .image-full {
+  max-width: 630px;
+  max-height: auto;
+  border-radius: 10px;
+  order: -1 !important;
+}
+
+#primary--single .image-full > img {
+  border-radius: 10px;
+}
+
+#primary--single {
+  all: inherit !important;
+}
+
+#primary--single .entry-content {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#primary--single .ngg-galleryoverview.default-view {
+  max-width: 63%;
+  order: -1;
+} 
+
+@media(max-width:769px) {
+  #primary--single .ngg-galleryoverview.default-view {
+    max-width: 100%;
+  } 
+}
+
+.ngg-galleryoverview.default-view {
+  text-align: start !important;
+}
+
+#primary--single .ngg-galleryoverview.default-view img {
+  border-radius: 10px;
+} 
+
+#primary--single .entry-footer {
+  display: none;
+}
+		
+
+/* Страница Автомобили в наличии */
+.pt-cv-thumbnail {
+  border-radius: 10px;
+  max-width: 305px;
+  max-height: 186px;
+}
+
+.pt-cv-ifield {
+  background-color: white;
+  max-width: max-content;
+}
+
+.pt-cv-ifield img {
+  object-fit: cover;
+}
+
+._blank.pt-cv-readmore.btn.btn-success {
+  background-color: var(--main);
+  color: white;
+  margin: 10px 0;
+
+}
+
+.pt-cv-content {
+  text-align: center;
+}
+
+.pt-cv-content {
+  color: var(--main);
+}
+
+.pt-cv-title {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.pt-cv-ifield {
+  border-radius: 10px;
+}
+
+.pt-cv-wrapper .col-xs-12  {
+  width: 100%;
+}
+
+#pt-cv-view-e0305583a5 .pt-cv-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+#primary--car {
+  width: 100vw;
+}
+
+
+.site-content {
+  background: #F1F1F1;
+}
+
 .header--btn__mobile {
   background-color: white;
   color: var(--main);
@@ -200,6 +550,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	gap: 10px;
 }
 
+@media(max-width: 1920px) {
+  .phone-mobile {
+    display: none;
+    color:#000
+  }  
+}
+
 .header {
     display: flex !important;
     justify-content: space-between !important;
@@ -227,18 +584,22 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     display: none;
   }
 
-    .header-center {
-        display: none;
-    }
+  .header-center {
+      display: none;
+  }
 
-    .header {
-        justify-content: space-between;
-    }
+  .header {
+      justify-content: space-between;
+  }
 
-    .btn__menu--mobile {
-        display: block !important;
-    }
+  .btn__menu--mobile {
+      display: block !important;
+  }
+  .phone-mobile {
+    display: block !important;
+  }
 }
+
 
 
 .header-logo {
@@ -580,7 +941,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 @media(max-width:1920px) {
 	.company__title {
-		background-image: url('./img/bg_text.png');
+		background-image: url('https://primasnabauto.ru/wp-content/themes/flare/assets/img/bg_text.png');
 		background-position: center;
 		padding: 79px;
 		background-repeat: no-repeat;
@@ -2186,7 +2547,7 @@ service section
 
 .db-latest-news,
 .db-our-service {
-  background-image: url('../flare/assets/img/do_bg.png');
+  background-image: url('https://primasnabauto.ru/wp-content/themes/flare/assets/img/do_bg.png');
   background: #e7e7e7;
   text-align: center;
   padding: 40px 0;
@@ -2610,10 +2971,10 @@ select#cat {
 inner pages and posts 
 --------------------------------------------------------------*/
 
-.container.tb-post-content #primary {
+/* .container.tb-post-content #primary {
   width: 70%;
   padding-right: 5%;
-}
+} */
 
 body.home.page-template-default #primary {
   width: 100%;
@@ -2771,9 +3132,6 @@ p.comment-form-comment label {
   padding-top: 10px;
 }
 
-.entry-content p {
-  padding: 10px 0;
-}
 
 ol.comment-list a {
   color: #000000;

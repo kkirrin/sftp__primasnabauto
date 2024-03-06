@@ -5,6 +5,8 @@
  * @package Flare
  */
 get_header();
+
+
 if ( 'posts' == get_option( 'show_on_front' ) ) {
 	include( get_home_template() );
     }
@@ -21,10 +23,13 @@ else{
 	if ($flare_static_page == 1) { ?>
 
 	<div id="content" class="site-content">
+
+	
 		<div class="container tb-post-content">
-			<div id="primary" class="content-area">
+			
+			<div id="primary--main" class="content-area">
 				<main id="main" class="site-main" role="main">
-						<?php
+						<!-- <?php
 						while ( have_posts() ) : the_post();
 
 							get_template_part( 'template-parts/content', 'single'  );
@@ -36,12 +41,48 @@ else{
 							endif;
 
 						endwhile; // End of the loop.
-						?>
+						?> -->
+
+
+				<section class="company">
+					<div class="container">
+						<div class="company__container relative">
+							<img class="company__car" src="<?php echo get_template_directory_uri() .'/assets/img/company__car.png'; ?>" alt="">
+							<h2 class="company__title">О компании</h2>
+							<p class="company__desc">
+								Компания ПримаСнаб Авто работает на рынке транспортного экспедирования и внешнеэкономической деятельности с 2012 года и оказывает услуги по организации международных и внутренних грузоперевозок, таможенному оформлению во Владивостоке.
+							</p>
+							<p class="company__desc">
+								Специалисты компании ПримаСнаб Авто, разрабатывают для клиентов эксклюзивные схемы доставки товаров, находят решения логистических и таможенных задач, работают со всеми видами грузов.
+							</p>
+				
+							<ul class="company__list counter-list">
+								<li class="company__list__item">
+									<span>10</span>+
+									<p>Лет на рынке</p>
+								</li>
+								<li class="company__list__item">
+									<span>1500</span>+
+									<p>Привезенных машин</p>
+								</li>
+								<li class="company__list__item">
+									<span>1000</span>+
+									<p>Довольных клиентов</p>
+								</li>
+							</ul>
+				
+							<button class="btn-more">
+								Подробнее о компании
+							</button>
+						</div>
+					</div>
+				</section>
+	
 				</main><!-- #main -->
 			</div><!-- #primary -->
-			<?php
+			<!-- <?php
 				get_sidebar();
-			?>
+			?> -->
 	</div>
 	<?php }
 }

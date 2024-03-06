@@ -2003,7 +2003,7 @@ pre code {
     margin-left: auto;
     /* width: 1280px; */
 }
-
+/* 
 @media (min-width:768px) {
     .container {
         width: 750px
@@ -2026,7 +2026,7 @@ pre code {
     .container {
         width: 1280px;
     }
-}
+} */
 
 .container-fluid {
     padding-right: 15px;

@@ -13,9 +13,10 @@
  */
 
 get_header(); ?>
+<!-- ВЫВОД МАШИН -->
 <div id="content" class="site-content">
 	<div class="container tb-post-content">
-		<div id="primary" class="content-area">
+		<div id="primary--car" class="content-area">
 			<main id="main" class="site-main" role="main">
 
 					<?php

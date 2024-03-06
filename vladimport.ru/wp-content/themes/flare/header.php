@@ -128,7 +128,16 @@ do_action( 'flare_action_header' );
 			   Оставить заявку
 		   </button>
 	   </div>
-   
+		
+	   <!-- <div class="phone-mobile">
+		   <svg width="20.000000" height="14.979492" viewBox="0 0 20 14.9795" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<path id="Vector" d="M9.01953 7.38672C9.54199 7.73535 10.458 7.73535 10.9805 7.38672L10.981 7.38672L19.8818 1.45312C19.5898 0.608398 18.7876 0 17.8452 0L2.15479 0C1.2124 0 0.410156 0.608398 0.118164 1.45312L9.01953 7.38672L9.01953 7.38672Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+				<path id="Vector" d="M11.6309 8.36133L11.6304 8.3623C11.1733 8.66699 10.5864 8.81934 10 8.81934C9.41309 8.81934 8.82666 8.66699 8.36963 8.3623L8.36914 8.36133L0 2.78223L0 12.8242C0 14.0127 0.966797 14.9785 2.15479 14.9785L17.8452 14.9785C19.0332 14.9785 20 14.0127 20 12.8242L20 2.78223L11.6309 8.36133Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+			</svg>
+	
+			<a class="contact--email" href="tel:+78002010888">8 800 20 10 888</a>
+	   </div> -->
+
 	   <div class="btn__menu--mobile">
 			<svg class="h-3 w-3" viewBox="0 0 64 48">
 				<path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
@@ -141,15 +150,21 @@ do_action( 'flare_action_header' );
 	   <div class="mobile-menu ">
 		   <div class="container">
 		   <img class="header-logo--small" src="<?php echo get_template_directory_uri() .'/assets/img/footer__logo--mobile.svg';?> " alt="мобильное меню">
-		   <?php wp_nav_menu([
-				'theme_location' => 'mobile-menu',
-				'container' => 'ul',
-				'menu_class' => 'mobile-menu--nav', 
-				]); 
-			?>
+		   
+		   <nav class="catalog-menu">
+				<?php wp_nav_menu([
+					'theme_location' => 'mobile-menu',
+					'container' => 'ul',
+					'menu_class' => 'mobile-menu--nav', 
+					]); 
+				?>
+			</nav>
+
+								
+	
 			<button class="header--btn header--btn__mobile">
 			   Оставить заявку
-		   </button>
+		   	</button>
 
 		   <ul class="footer__item">
 				<li class="pb-2">
