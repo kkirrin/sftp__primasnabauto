@@ -1,13 +1,13 @@
-const initSaleSlider = () => {
-    const generalSlider = document.querySelector('.news-item');
+const initNewsSlider = () => {
+    const generalSlider = document.querySelector('.new-items-1');
+    console.log('Я ТУТ')
 
     if (generalSlider) {
 
         const swiper = new Swiper(generalSlider, {
+            slidesPerView: 3,
             spaceBetween: 20,
             speed: 1300,
-            loop: true,
-            direction: 'horizontal',
             navigation: {
                 nextEl: '.next-new--item-1',
                 prevEl: '.prev-new--item-1',
@@ -15,20 +15,18 @@ const initSaleSlider = () => {
 
             breakpoints: {
                 320: {
-                    slidesPerView: 1,
-                    spaceBetween: 10
-                },
-                426: {
-                    slidesPerView: 1,
-                    spaceBetween: 10
+                    slidesPerView: 2,
                 },
                 460: {
-                    slidesPerView: 1,
+                    slidesPerView: 2,
+                },
+                460: {
+                    slidesPerView: 2,
                     spaceBetween: 10
                 },
                 769: {
-                    slidesPerView: 1,
-                    spaceBetween: 15
+                    slidesPerView: 3,
+                    spaceBetween: 20
                 },
                 1047: {
                     slidesPerView: 3,
@@ -39,4 +37,4 @@ const initSaleSlider = () => {
     }
 }
 
-initSaleSlider();
+initNewsSlider()

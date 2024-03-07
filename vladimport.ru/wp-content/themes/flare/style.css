@@ -47,13 +47,103 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /* Кастомные стили для редизайна */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-.news h2, .db-latest-news h2 {
+
+.simple-banner-text {
+  display: none !important;
+}
+
+.div__link {
+  display: block;
+}
+
+.btn-more {
+  display: block !important;
+  width: 100%;
+  text-align: center;
+}
+
+.container-header {
+  background-color: white !important;
+}
+
+.header-center {
+  position: relative;
+}
+
+
+
+.header-center::before {
+  content: "";
+  position: absolute;    
+  top: 113%; 
+  left: -13px;
+  width: 150px; 
+  height: 20px;
+  background-color: #fff !important;
+  transform: translateY(-50%); 
+  z-index: 1; 
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+
+.new-items-section {
+  position: relative; 
+}
+
+.arrows__slider {
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  right: -22px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.next-new--item-1 {
+  background: none !important;
+}
+
+.prev-new--item-1 {
+  background: none !important;
+}
+
+.main-slider .carousel-caption__btn  {
+  background-color: var(--main) !important;
+  border-radius: 10px !important;
+}
+
+.main-slider .slick-prev:before {
+  color: var(--main) !important;
+}
+
+.main-slider .slick-next:before  {
+  color: var(--main) !important;
+}
+
+.blog-img.img-responsive {
+  border-radius: 10px;
+}
+
+.news h2, .auto__in__stock h2, .db-our-service h2 {
   font-size: 50px;
   color: var(--color);
   font-weight: 600;
   line-height: 82px;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
+
+.db-latest-new {
+  display: none !important;
+}
+
+.db-our-service h2 {
+  color: var(--white) !important;
+}
+
 
 .img-n-des.clearfix {
   border-radius: 10px !important;
@@ -63,11 +153,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: none !important;
 }
 
-.db-latest-news img {
-  border-radius: 10px;
-  max-width: 305px;
-  max-height: 186px;
-}
+
 
 .img-n-des.clearfix h2 {
   color: rgb(22, 22, 22);
@@ -83,6 +169,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   font-size: 16px;
   font-weight: 600;
   line-height: 21px;
+  text-align: center;
 } 
 
 .btn-c.btn-blue.white-border {
@@ -99,7 +186,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 }
 
 .icons-n-titles-coll.clearfix i {
-  color: rgba(225, 25, 26);
+  color: rgba(225, 25, 26) !important;
 }
 .main__page__style {
   display: flex;
@@ -805,6 +892,10 @@ center a .aj_off1 {
   border-top-left-radius: 40px;
 }
 
+.company {
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+}
 
 /* Стили для заявки на таможенное оформление */
 .request {
@@ -918,7 +1009,7 @@ center a .aj_off1 {
 
 @media(max-width: 1440px) {
 	.request__body__img {
-		width: 500px;
+		width: 600px;
 	}	
 }
 
@@ -943,8 +1034,9 @@ center a .aj_off1 {
 
 /* Стили для секции о Компании */
 .company {
-  background-image: url('https://primasnabauto.ru/wp-content/themes/flare/assets/img/company__bg.png');
+  background-image: url('https://primasnabauto.ru/wp-content/themes/flare/assets/img/company__bg1.png');
 	padding: 50px 0;
+  order: -1;
 }
 
 
@@ -960,7 +1052,7 @@ center a .aj_off1 {
 		width: 100%;
 	}
 	.company__title {
-		bottom: 31% !important;
+		bottom: 11% !important;
 	}
 }
 
@@ -969,7 +1061,7 @@ center a .aj_off1 {
 		width: 80%;
 	}
 	.company__title {
-		bottom: 35% !important;
+		bottom: 29% !important;
 	}
 }
 
@@ -978,7 +1070,7 @@ center a .aj_off1 {
 		width: 80%;
 	}
 	.company__title {
-		bottom: 38% !important;
+		bottom: 26% !important;
 	}
 }
 
@@ -986,27 +1078,27 @@ center a .aj_off1 {
 @media(max-width:769px) {
 	.company__title {
 		padding: 70px !important;
-		bottom: 55% !important;
+		bottom: 60% !important;
 	}
 }
 
 
 @media(max-width:450px) {
 	.company__title {
-		bottom: 79% !important;
+		bottom: 83% !important;
 		padding: 10px !important;
 	}
 }
 
-@media(max-width:1920px) {
+@media(max-width:2500px) {
 	.company__title {
 		background-image: url('https://primasnabauto.ru/wp-content/themes/flare/assets/img/bg_text.png');
 		background-position: center;
-		padding: 79px;
+		padding: 157px;
 		background-repeat: no-repeat;
 		z-index: 1000;
 		position: absolute;
-		bottom: 22%;
+		bottom: 11%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		font-size: clamp(1.5rem, 0.339rem + 3.095vw, 3.125rem);
@@ -1097,20 +1189,20 @@ center a .aj_off1 {
 }
 
 .do__list__item {
-	background-color: #fff;
+	/* background-color: #fff; */
 	padding: 20px;
-	max-width: 350px;
+	max-width: 413px;
 	border-radius: 10px;
 	
 }
 
 .do__list__item__title {
-	text-align: center;
+	text-align: start;
 	color: rgb(0, 0, 0);
 	font-family: Roboto;
 	font-size: 24px;
 	font-weight: 600;
-	padding: 40px 0 20px 0;
+	padding: 24px 0 20px 0;
 }
 
 .do__list__item__desc {
@@ -1119,7 +1211,7 @@ center a .aj_off1 {
 	font-size: 16px;
 	font-weight: 400;
 	padding: 10px 0;
-	text-align: center;
+	text-align: start;
 }
 
 .do__list__item__img {
@@ -2736,9 +2828,6 @@ callback section
   color: #000;
 }
 
-.db-latest-news {
-  text-align: left;
-}
 
 .img-n-des.clearfix {
   margin: 4.2858rem 0;
@@ -2753,6 +2842,9 @@ callback section
 .blog-btn {
   text-align: center;
   padding: 10px;
+}
+.db-latest-news {
+  display: none !important;
 }
 
 .db-latest-news .date {

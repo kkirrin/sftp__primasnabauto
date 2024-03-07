@@ -142,7 +142,7 @@ return $avatar_defaults;
 
 
 function flare_scripts() {
-		wp_enqueue_style( 'flare-style', get_stylesheet_uri(),'','2.6.6' );
+		wp_enqueue_style( 'flare-style', get_stylesheet_uri(),'','2.9.1' );
 		/*google fonts*/
 		wp_enqueue_style( 'flare-google-fonts', '//fonts.googleapis.com/css?family=Merriweather:300,300italic,400,400italic,700,700italic');
 
@@ -150,22 +150,22 @@ function flare_scripts() {
 	 	//  VARIABLES AND ARRAY
         $assets_url = get_template_directory_uri() .'/assets/';
         // REGISTER STYLE
-	    wp_enqueue_style( 'bootstrap', $assets_url.'css/vendor/bootstrap.min.css', '', '2,6.6');
-	    wp_enqueue_style( 'swiper-bundle', $assets_url.'css/vendor/swiper-bundle.min.css', '', '2,6.6');
-	    wp_enqueue_style( 'font-awesome', $assets_url.'font-awesome/css/font-awesome.min.css', array(), '4.6.6' );
+	    wp_enqueue_style( 'bootstrap', $assets_url.'css/vendor/bootstrap.min.css', '', '2.9.1');
+	    wp_enqueue_style( 'swiper-bundle', $assets_url.'css/vendor/swiper-bundle.min.css');
+	    wp_enqueue_style( 'font-awesome', $assets_url.'font-awesome/css/font-awesome.min.css', array(), '4.834534' );
         wp_enqueue_style( 'slick', $assets_url.'css/vendor/slick.css');
         wp_enqueue_style( 'animation', $assets_url.'css/components/animation.css');
 
         // REGISTER SCRIPT
-        wp_enqueue_script( 'jquery-bootstrap', $assets_url.'js/vender/bootstrap.min.js', array('jquery'), 'v4.3.8', true );
-        wp_enqueue_script( 'swiper-bundle', $assets_url.'js/vender/swiper-bundle.min.js', array('jquery'), '1.2');
+        wp_enqueue_script( 'jquery-bootstrap', $assets_url.'js/vender/bootstrap.min.js', array('jquery'), 'v4.3.9', true );
+        wp_enqueue_script( 'swiper-bundle', $assets_url.'js/vender/swiper-bundle.min.js', '', '1.5');
         wp_enqueue_script( 'jquery-slick', $assets_url.'js/vender/slick.js', array('jquery'));
-        wp_enqueue_script( 'app', $assets_url.'js/app.js', array(), 'v1.5.5');
+        // wp_enqueue_script( 'app', $assets_url.'js/app.js', array(), 'v1.5.5');
 
-        wp_enqueue_script( 'jquery-wow', $assets_url.'js/vender/wow.min.js', array('jquery'), '1.1.4', true );
+        wp_enqueue_script( 'jquery-wow', $assets_url.'js/vender/wow.min.js', array('jquery'), '1.1.5', true );
         
         //ENQUEUE
-        wp_enqueue_script( 'flare-main', $assets_url.'js/main.js', array('jquery'),null,true, '2.2.3' );
+        // wp_enqueue_script( 'flare-main', $assets_url.'js/main.js', array('jquery'),null,true, '2.2.3' );
         
 	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/assets/js/navigation.js', array('jquery'), '20151215', true );
 	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -236,7 +236,7 @@ function flare_featured_home_main_slider() {
 	?>
 		<div class="main-slider">
 			<div class="item"
-				style="background-image: url('https://primasnabauto.ru/wp-content/uploads/2017/11/5f70907a8f.jpg');">
+				style="background-image: url('https://primasnabauto.ru/wp-content/themes/flare/assets/img/main_slide.png');">
 				<div class="carousel-caption wow fadeInUp">
 					<h1>Аукционы Японии</h1>
 					<p>Как купить&nbsp;автомобиль из Японии Хотите приобрести автомобиль с японского
