@@ -47,6 +47,65 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /* Кастомные стили для редизайна */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+.news h2, .db-latest-news h2 {
+  font-size: 50px;
+  color: var(--color);
+  font-weight: 600;
+  line-height: 82px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.img-n-des.clearfix {
+  border-radius: 10px !important;
+}
+
+.blog-date {
+  display: none !important;
+}
+
+.db-latest-news img {
+  border-radius: 10px;
+  max-width: 305px;
+  max-height: 186px;
+}
+
+.img-n-des.clearfix h2 {
+  color: rgb(22, 22, 22);
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.img-n-des.clearfix p {
+  color: rgb(22, 22, 22);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21px;
+} 
+
+.btn-c.btn-blue.white-border {
+  background-color: var(--main) !important;
+  color: var(--white);
+}
+
+.detail {
+  display: none !important;
+}
+
+.icons-n-titles-coll.clearfix .wrapper {
+  border-radius: 10px;
+}
+
+.icons-n-titles-coll.clearfix i {
+  color: rgba(225, 25, 26);
+}
+.main__page__style {
+  display: flex;
+  flex-direction: column;
+}
+
 .eb-callback-section #eb-callback-background {
   display: none !important;
 }
@@ -884,7 +943,7 @@ center a .aj_off1 {
 
 /* Стили для секции о Компании */
 .company {
-	background-image: url('img/company__bg.png');
+  background-image: url('https://primasnabauto.ru/wp-content/themes/flare/assets/img/company__bg.png');
 	padding: 50px 0;
 }
 
@@ -979,13 +1038,14 @@ center a .aj_off1 {
 	margin: 0 auto;
 }
 
+
 .company__list__item {
 	display: flow-root;
 	text-align: center;
 	padding: 30px;
 	border-radius: 10px;
 	background: rgb(241, 241, 241);
-	width: 413px;
+	width: 390px;
 }
 .company__list__item > span {
 	color: rgb(76, 146, 114);
@@ -2545,9 +2605,11 @@ a.btn-c.btn-blue.white-border:hover {
 service section 
 --------------------------------------------------------------*/
 
-.db-latest-news,
+
 .db-our-service {
-  background-image: url('https://primasnabauto.ru/wp-content/themes/flare/assets/img/do_bg.png');
+  background-image: url('https://primasnabauto.ru/wp-content/themes/flare/assets/img/do_bg.png') !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
   background: #e7e7e7;
   text-align: center;
   padding: 40px 0;

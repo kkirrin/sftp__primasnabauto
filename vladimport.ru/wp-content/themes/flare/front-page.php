@@ -22,14 +22,14 @@ else{
 	$flare_static_page = absint($flare_customizer_all_values['flare-enable-static-page']);
 	if ($flare_static_page == 1) { ?>
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content main__page__style">
 
 	
 		<div class="container tb-post-content">
 			
 			<div id="primary--main" class="content-area">
 				<main id="main" class="site-main" role="main">
-						<!-- <?php
+						<?php
 						while ( have_posts() ) : the_post();
 
 							get_template_part( 'template-parts/content', 'single'  );
@@ -41,10 +41,66 @@ else{
 							endif;
 
 						endwhile; // End of the loop.
-						?> -->
+						?> 
+				</main><!-- #main -->
+				
+			</div><!-- #primary -->
+			
+			<?php
+				get_sidebar();
+			?>
+			
+	</div>
+
+	<section class="news">
+		<div class="container">
+			<div class="flex">
+				<div>
+					<h2 class="">Новости и акции </h2>
+				</div>
 
 
-				<section class="company">
+				<!-- <div class="">
+					<div class="swiper-pagination"></div>
+					<div>
+						<button class="prev-new--item-1 bg-white rounded-lg shadow-md shadow-main-black -z-0 mr-5">
+							<img src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow_prev.svg"
+								alt="влево" />
+						</button>
+						<button class="next-new--item-1 bg-white rounded-lg shadow-md shadow-main-black -z-0 mr-5">
+							<img src="<?php echo get_template_directory_uri() ?>/src/img/icons/arrow_next.svg"
+								alt="вправо" />
+						</button>
+					</div>
+				</div> -->
+
+			</div>
+
+			<div class="new-items-section">
+				<div class="swiper news-item">
+					<div class="swiper-wrapper" style="align-items: stretch; width: 0; min-width: 100%;">			
+						<div class="swiper-slide" style="height:auto;">
+							1
+						</div>
+						<div class="swiper-slide" style="height:auto;">
+							2
+						</div>
+						<div class="swiper-slide" style="height:auto;">
+							3
+						</div>
+						<div class="swiper-slide" style="height:auto;">
+							4
+						</div>
+						<div class="swiper-slide" style="height:auto;">
+							5
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> 
+
+	<section class="company">
 					<div class="container">
 						<div class="company__container relative">
 							<img class="company__car" src="<?php echo get_template_directory_uri() .'/assets/img/company__car.png'; ?>" alt="">
@@ -77,13 +133,6 @@ else{
 						</div>
 					</div>
 				</section>
-	
-				</main><!-- #main -->
-			</div><!-- #primary -->
-			<!-- <?php
-				get_sidebar();
-			?> -->
-	</div>
 	<?php }
 }
 get_footer();

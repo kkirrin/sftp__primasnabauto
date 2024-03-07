@@ -10,8 +10,6 @@ const initNav2 = () => {
     
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', (evt) => {
-                menuButton.classList.remove('active');
-                menu.classList.remove('is-active');
                 body.classList.remove('lock');
             });
         });
@@ -24,7 +22,7 @@ const initNav2 = () => {
     
         menuLinks.forEach(link => {
             link.addEventListener('click', (evt) => {
-                menuButton.classList.remove('active');
+                // menuButton.classList.remove('active');
                 menu.classList.remove('is-active');
                 body.classList.remove('lock');
             });
@@ -34,8 +32,7 @@ const initNav2 = () => {
     
   }
 
-  
-// AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
 const initDropList = () => {
     const dropdownToggles = document.querySelectorAll('.catalog-menu li');
     console.log(dropdownToggles);
