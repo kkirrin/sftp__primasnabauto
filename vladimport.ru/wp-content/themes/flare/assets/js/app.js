@@ -3,6 +3,7 @@ const initNav2 = () => {
     if(body) {
         const mobileMenu = document.querySelector('.mobile-menu')
         const mobileMenuButton = document.querySelector('.btn__menu--mobile')
+        console.log(mobileMenuButton)
         console.log('Я Тут')
     
         const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
@@ -13,11 +14,15 @@ const initNav2 = () => {
                 body.classList.remove('lock');
             });
         });
+
         mobileMenuButton.addEventListener('click', (evt) => {
+            evt.preventDefault();
             mobileMenuButton.classList.toggle('active');
             mobileMenu.classList.toggle('is-active');
             body.classList.toggle('lock');
+
         })
+    
     
     
         menuLinks.forEach(link => {
@@ -60,9 +65,7 @@ const initDropList = () => {
             }
         });
     });
+}
   
-  
-  }
-
 initDropList();
-initNav2()
+initNav2();

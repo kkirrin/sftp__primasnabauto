@@ -47,10 +47,134 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /* Кастомные стили для редизайна */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-.header--mobile {
-  height: 66px !important;
+@media(max-width:375px) {
+  .header--mobile {
+    height: 35px !important;
+  }
+  .contact--phone--header {
+    font-size: 12px !important; 
+  }
+  
 }
 
+
+
+.footer__item--mobile {
+  padding-top: 20px;
+}
+
+.header--btn--mobile {
+  color: var(--main) !important;
+  background-color: white !important;
+  margin: 20px 40px !important;
+}
+
+.auto__in__stock {
+  margin-top: 50px;
+}
+
+.request {
+  margin-top: 100px;
+}
+
+.accordion-arrow {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.header--container__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+
+.contact--phone--header {
+  color:rgb(0, 0, 0);
+  font-weight: 600;
+}
+
+.phone-mobile--header {
+  color:rgb(0, 0, 0);
+}
+
+@media(max-width:450px) {
+  .footer__list {
+    flex-direction: column-reverse;
+    gap: 0px !important;
+  }
+}
+
+
+@media(max-width:425px) {
+  .request__subtitle, .request__text, .request__body__review, .request__body__reviews--item  {
+    text-align: center !important; 
+    justify-content: center !important;
+  }
+}
+
+
+@media(max-width:769px) {
+  .request__body__items {
+    gap: 0 !important;
+  }
+  .request__body {
+    padding: 0 !important;
+  }
+}
+
+@media(max-width:450px) {
+  .request__body__img {
+    display: none;
+  }
+}
+
+.footer__item a {
+  color: rgba(255, 255, 255, 0.6);
+
+}
+
+.footer__item li {
+  padding-bottom: 16px;
+
+}
+
+.col-md-6.col-sm-6.col-xs-12.pt-cv-content-item.pt-cv-1-col:last-of-type .pt-cv-ifield .pt-cv-thumbnail {
+  width: 300px;
+}
+
+.mobile-menu--nav .sub-menu {
+  max-height: 0;
+  opacity: 0;
+  will-change: max-height;
+  transform-origin: 0 0;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+  transform: none;
+  transform-origin: unset;
+  position: static;
+  padding-top: 10px;
+  padding-left: 20px;
+  width: auto;
+}
+
+
+.mobile-menu--nav .sub-menu.is-active {
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: auto;
+  transition: 1s all;
+}
+
+
+
+.header--mobile {
+  height: 47px;
+}
+/* 
 @media(max-width:2500px) {
   .ngg-galleryoverview.default-view img {
     width: 235px;
@@ -84,7 +208,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     width: 110px;
   }
       
-}
+} */
 
 #primary--car .container__single__image {
   display: block !important;
@@ -185,10 +309,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .header-center::before {
   content: "";
   position: absolute;    
-  top: 113%; 
+  top: 106%; 
   left: -13px;
   width: 150px; 
-  height: 20px;
+  height: 11px;
   background-color: #fff !important;
   transform: translateY(-50%); 
   z-index: 1; 
@@ -218,6 +342,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .prev-new--item-1 {
   background: none !important;
+}
+
+@media(max-width:769px) {
+  .next-new--item-1, .prev-new--item-1 {
+    display: none;
+  }
 }
 
 .main-slider .carousel-caption__btn  {
@@ -382,7 +512,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 }
 
 .order__container {
-  padding: 20px;
+  padding: 5px;
 }
 
 @media(max-width:769px) {
@@ -472,7 +602,7 @@ center a .aj_off1 {
 
 .cost__list {
   max-width: 80%;
-  padding: 20px;
+  padding: 5px;
 }
 
 @media(max-width: 450px) {
@@ -598,7 +728,8 @@ center a .aj_off1 {
 }
 
 .ngg-galleryoverview.default-view {
-  text-align: start !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, 2fr);
 }
 
 #primary--single .ngg-galleryoverview.default-view img {
@@ -689,7 +820,7 @@ center a .aj_off1 {
   opacity: 0;
   visibility: hidden;
   text-transform: lowercase;
-  padding: 5px 20px 20px 20px;
+  padding: 5px 20px 0px 20px;
 }
 
 
@@ -873,9 +1004,15 @@ center a .aj_off1 {
   .phone-mobile {
     display: block !important;
   }
+
+  .phone-mobile--header {
+    display: block !important;
+  }
 }
 
-
+.phone-mobile--header {
+  display: none;
+}
 
 .header-logo {
 	display: none;
@@ -1043,45 +1180,64 @@ center a .aj_off1 {
 
 }
 
+
+
 .request__body {
 	background: var(--main);
-	padding: 50px 0 !important;
+	padding: 50px 0;
 }
 
 .request__body__items {
-	display: flex !important;
-	justify-content: space-between !important;
-	gap: 50px !important;
-	flex-wrap: wrap !important;
+	display: flex;
+	justify-content: space-around;
+	gap: 50px;
+	flex-wrap: wrap;
 }
 
 .request__subtitle {
 	color: rgb(255, 255, 255) !important;
 	font-family: Roboto !important;
-	font-size: clamp(2.25rem, 0.732rem + 4.048vw, 4.375rem) !important;
+	font-size: 70px;
 	font-weight: 600 !important;
 	line-height: 100% !important;
 	padding: 20px 0 !important;
 }
 
+@media(max-width:769px) {
+  .request__subtitle {
+    font-size: 37px;
+  }
+}
+
 .request__text {
 	color: rgb(255, 255, 255) !important;
 	font-family: Roboto !important;
-	font-size: clamp(0.875rem, 0.607rem + 0.714vw, 1.25rem) !important;
+	font-size: 20px;
 	font-weight: 400 !important;
 	line-height: 140% !important;
 	text-wrap: balance !important;
 }
+@media(max-width:769px) {
+  .request__text {
+    font-size: 16px;
+    text-wrap: nowrap;
+  }
+}
+
+
 
 @media(max-width:450px) {
 	.request__text {
 		/* width: 50% !important; */
 	}	
+  .request__body__reviews {
+    justify-content: start !important;
+  }
 }
 
 @media(max-width:1920px) {
 	.request__body__review {
-		width: 40% !important;
+		width: 45% !important;
 	}	
 }
 
@@ -1095,26 +1251,33 @@ center a .aj_off1 {
 .request__body__reviews {
 	padding: 20px 0 !important;
 	display: flex !important;
-	justify-content: start !important;
-	align-items: center !important;
-	flex-wrap: wrap !important;
+	justify-content: center;
+	align-items: baseline;
+	/* flex-wrap: wrap !important; */
+  gap: 10px;
+}
+@media(max-width:600px) {
+  .request__body__reviews {
+    flex-wrap: wrap;
+  }
 }
 
 .request__body__reviews--item {
 	color: rgb(255, 255, 255) !important;
 	font-family: Roboto !important;
-	font-size: clamp(0.875rem, 0.607rem + 0.714vw, 1.25rem) !important;
+	font-size: 18px;
 	font-weight: 900 !important;
 	text-decoration: none !important;
 }
 
 .request__body__rate {
 	color: var(--white) !important;
+  font-size: 18px;
 }
 
 
 .request__body__reviews--item {
-	padding: 20px 20px !important;
+	/* padding: 20px 20px !important; */
 }
 
 .request__body__review__img {
@@ -1124,7 +1287,7 @@ center a .aj_off1 {
 .request__body__review__rate {
 	padding: 20px 0 !important;
 	display: flex !important;
-	justify-content: start !important;
+	justify-content: center !important;
 	align-items: start !important;
 	gap: 5px !important;
 
@@ -1132,7 +1295,7 @@ center a .aj_off1 {
 
 @media(max-width:1920px) {
   .request__body__img {
-    width: 700px;
+    width: 628px;
   }
 }
 
@@ -1214,7 +1377,7 @@ center a .aj_off1 {
 
 @media(max-width:450px) {
 	.company__title {
-		bottom: 83% !important;
+		bottom: 81% !important;
 		padding: 10px !important;
 	}
 }
@@ -1409,7 +1572,7 @@ center a .aj_off1 {
 	display: flex !important;
 	justify-content: space-between !important;
 	align-items: start !important;
-	gap: 50px !important;
+	gap: 50px;
   list-style: none !important;
 }
 
@@ -1490,7 +1653,7 @@ center a .aj_off1 {
 
 @media(max-width:769px) {
 	.footer__list div:not(:last-child) {
-		width: 31%;
+		/* width: 31%; */
 	}
 }
 
@@ -2365,11 +2528,11 @@ span.byline:before {
   padding: 0 2px 0 9px;
 }
 
-.page-content,
+/* .page-content,
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
-}
+} */
 
 .page-links {
   clear: both;
@@ -4310,8 +4473,8 @@ responsive
   .home.blog #primary {
     float: none;
     width: 100% !important;
-    padding-right: 16px !important;
-    padding-left: 16px !important;
+    /* padding-right: 16px !important;
+    padding-left: 16px !important; */
   }
   .address-section,
   .flare-top-nav {
