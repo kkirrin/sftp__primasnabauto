@@ -112,7 +112,7 @@ do_action( 'flare_action_header' );
 				?>
 		</div>
 
-		<svg class="header-logo" viewBox="0 0 142 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<svg class="header-logo header--mobile" viewBox="0 0 142 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				<rect x="66.5126" width="75.4874" height="39.5879" fill="white"/>
 				<rect width="66.5126" height="39.5879" fill="url(#pattern0)"/>
 				<rect x="44.1368" y="8.85205" width="94.7896" height="22.4987" fill="url(#pattern1)"/>

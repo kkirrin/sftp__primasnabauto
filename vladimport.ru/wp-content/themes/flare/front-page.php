@@ -143,15 +143,15 @@ else{
 
 				<ul class="company__list counter-list">
 					<li class="company__list__item">
-						<span>10</span>+
+						<span>10+</span>
 						<p>Лет на рынке</p>
 					</li>
 					<li class="company__list__item">
-						<span>1500</span>+
+						<span>1500+</span>
 						<p>Привезенных машин</p>
 					</li>
 					<li class="company__list__item">
-						<span>1000</span>+
+						<span>1000+</span>
 						<p>Довольных клиентов</p>
 					</li>
 				</ul>

@@ -9,24 +9,25 @@
 
 ?>
 	<div class="entry-content">
-		<?php
-		$flare_single_post_image_align = flare_single_post_image_align(get_the_ID());
-		if( 'no-image' != $flare_single_post_image_align ){
-			if( 'left' == $flare_single_post_image_align ){
-				echo "<div class='image-left'>";
-				the_post_thumbnail('medium');
+		<div class="container__single__image"> 
+			<?php
+			$flare_single_post_image_align = flare_single_post_image_align(get_the_ID());
+			if( 'no-image' != $flare_single_post_image_align ){
+				if( 'left' == $flare_single_post_image_align ){
+					echo "<div class='image-left'>";
+					the_post_thumbnail('medium');
+				}
+				elseif( 'right' == $flare_single_post_image_align ){
+					echo "<div class='image-right'>";
+					the_post_thumbnail('medium');
+				}
+				else{
+					echo "<div class='image-full'>";
+					the_post_thumbnail('full');
+				}
+				echo "</div>";/*div end*/
 			}
-			elseif( 'right' == $flare_single_post_image_align ){
-				echo "<div class='image-right'>";
-				the_post_thumbnail('medium');
-			}
-			else{
-				echo "<div class='image-full'>";
-				the_post_thumbnail('full');
-			}
-			echo "</div>";/*div end*/
-		}
-		?>
+			?>
 
 		<?php the_content(); ?>
 		<?php

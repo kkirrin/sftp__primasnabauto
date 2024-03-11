@@ -84,16 +84,20 @@
                         </li>
     
                         <li class="pb-2">
-                            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs>
                                 <clipPath id="clip62_1440">
                                     <rect id="Frame" width="20.000000" height="20.000000" fill="white" fill-opacity="0"/>
                                 </clipPath>
-
-                                <rect id="Frame" width="20.000000" height="20.000000" fill="#FFFFFF" fill-opacity="0"/>
-                                <g clip-path="url(#clip62_1440)">
-                                    <path id="Vector" d="M9.99951 0.820312C6.10498 0.820312 2.93652 3.98926 2.93652 7.88379C2.93652 11.5645 8.79932 16.9023 9.46729 17.6143L9.99951 18.1797L10.5317 17.6143C11.2002 16.9033 17.063 11.5645 17.063 7.88379C17.063 3.98926 13.8945 0.820312 9.99951 0.820312ZM9.99951 10.8066C8.38818 10.8066 7.07715 9.49512 7.07715 7.88379C7.07715 6.27246 8.38818 4.96094 9.99951 4.96094C11.6113 4.96094 12.9224 6.27246 12.9224 7.88379C12.9224 9.49512 11.6113 10.8066 9.99951 10.8066Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
-                                </g>
-                            </svg>
+                            </defs>
+                            <rect id="Frame" width="20.000000" height="20.000000" fill="#FFFFFF" fill-opacity="0"/>
+                            <g clip-path="url(#clip62_1440)">
+                                <path id="Vector" d="M9.99951 0.820312C6.10498 0.820312 2.93652 3.98926 2.93652 7.88379C2.93652 11.5645 8.79932 16.9023 9.46729 17.6143L9.99951 18.1797L10.5317 17.6143C11.2002 16.9033 17.063 11.5645 17.063 7.88379C17.063 3.98926 13.8945 0.820312 9.99951 0.820312ZM9.99951 10.8066C8.38818 10.8066 7.07715 9.49512 7.07715 7.88379C7.07715 6.27246 8.38818 4.96094 9.99951 4.96094C11.6113 4.96094 12.9224 6.27246 12.9224 7.88379C12.9224 9.49512 11.6113 10.8066 9.99951 10.8066Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </g>
+                        </svg>
 
                             <a class="contact--geo">Владивосток, ул. Нижнепортовая, 1 </a>
                         </li>
@@ -126,10 +130,12 @@
 
     <?php wp_footer(); ?>
 
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/newsSlider.js?1.3>"></script> 
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/swiper-bundle.min.js?1.3>"></script> 
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/app.js?1.3"></script> 
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js?1.3"></script>
+    
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/deleteBr.js?1.6.4>"></script> 
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/newsSlider.js?1.6.4>"></script> 
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/swiper-bundle.min.js?1.6.4>"></script> 
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/app.js?1.6.4"></script> 
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js?1.6.4"></script>
 
 
 
