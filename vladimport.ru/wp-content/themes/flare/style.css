@@ -47,7 +47,174 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /* Кастомные стили для редизайна */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+.btn__tool {
+  margin: 0 !important;
+}
 
+
+/* стили для кнопки*/
+
+.chat_panel_item_link_icon svg, .chat_icon svg { 
+  fill: #fff; 
+  width: 32px; 
+  height: 32px; 
+} 
+.icon-hide { 
+  display: none; 
+} 
+.pulse_wrap { 
+  width: 58px; 
+  height: 58px; 
+  position: fixed; 
+  right: 35px; 
+  bottom: 35px; 
+  box-sizing: border-box; 
+}
+.pulse { 
+  position: absolute; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background: #2ba75e; 
+  border-radius: 50%; 
+  width: 58px; 
+  height: 58px; 
+  cursor: pointer; 
+  box-sizing: border-box; 
+  z-index: 999; 
+} 
+.pulse:before, .pulse:after { 
+  content: " "; 
+  display: block; 
+  position: absolute; 
+  border: 4px solid #31742b; 
+  left: -20px;
+  right: -20px; 
+  top: -20px; 
+  bottom: -20px; 
+  border-radius: 50%; 
+  box-sizing: border-box; 
+}
+.pulse .chat_icon { 
+  width: 32px; 
+  height: 32px; 
+} 
+.pulse:before, .pulse:after { 
+animation: pulseanim 3s linear infinite; } 
+.pulse:after { 
+animation-delay: 1.5s; 
+} 
+@keyframes pulseanim { 
+0% { 
+transform: scale(0.7); 
+opacity: 1; 
+} 
+50% { 
+transform: scale(1); 
+opacity: .3; 
+} 
+100% { 
+transform: scale(1.3); 
+opacity: 0; 
+} 
+} 
+.stoppulse.pulse::before, .stoppulse.pulse::after { animation-play-state: paused; 
+  border-color: transparent; 
+  display: none; 
+}
+.chat_panel { 
+  z-index: 2; 
+  position: absolute; 
+  bottom: 9px; 
+  right: 0; 
+  left: 0; 
+  margin: 0 auto; 
+  overflow: hidden; 
+  height: 0px; 
+  width: 50px; 
+  padding: 2px 2px 0;
+  -webkit-transition: all .4s linear; 
+  -moz-transition: all .4s linear; 
+  -o-transition: all .4s linear; 
+  transition: all .4s linear; 
+  box-sizing: border-box; 
+} 
+.panel-open { 
+  height: 150px; 
+/* Высота панели иконок. Вычитайте по 51 пикселю за каждую удаленную иконку */ } 
+.chat_panel_item { 
+  float: left; 
+  margin-bottom: 5px; 
+  margin-left: 5px;
+}
+.chat_panel_item_link_icon svg { 
+  width: 27px; 
+  height: 27px; 
+  margin: 4px 4px 0;
+} 
+.chat_link_icon_whatsapp { 
+  background-color: #1fc14b; 
+  border-radius: 20px;
+  transition: all .5s ease-in-out;
+} 
+.chat_link_icon_email { 
+  background-color: #0083d1; 
+  
+} 
+.chat_link_icon_instagram { 
+  background-color: #c62eba; 
+} 
+.chat_link_icon_call { 
+  background-color: #47547a; 
+  border-radius: 20px;
+  transition: all .5s ease-in-out;
+} 
+.chat_link_icon_viber { 
+  background-color: #7360f2;
+} 
+.chat_link_icon_telegram { 
+  background-color: #0088cc; 
+} 
+
+.chat_link_icon_whatsapp:hover, .chat_link_icon_call:hover {
+  scale: 1.1;
+}
+/*  */
+
+.promt {
+  padding: 5px;
+  border: 1px solid #535050;
+  border-radius: 5px;
+  max-width: 76px;
+  color: #535050;
+  font-weight: 500;
+}
+
+.icons__container {
+  display: inline-flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons__phone {
+  position: absolute;
+  margin: 0;
+  bottom: 100%;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+  gap: 12px;
+  width: auto;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+
+.link__footer {
+  color:  white;
+}
 
 .request__body__reviews--item__link {
   transition: all 0.5s ease-in-out;
@@ -68,15 +235,89 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   cursor: pointer;
   position: fixed;
   bottom: 100px;
-  right: 30px;
+  right: 110px;
   display: block;
   z-index: 999;
   transition: all .5s ease-in-out;
 }
 
+.scroll-top--2 {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 30px;
+  /* background: linear-gradient(0deg, var(--yellow, #FCBC40) 0%, var(--yellow, #FCBC40) 100%), #FFF; */
+  /* border: 2px solid #ffffff; */
+  border-radius: 30px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 150px;
+  right: 110px;
+  display: block;
+  z-index: 999;
+  transition: all .5s ease-in-out;
+}
 
-.scroll-top:hover {
-  scale: 1.2;
+.scroll-top--3 svg {
+  background: var(--main);
+}
+
+.scroll-top {
+  background: none;
+}
+
+.scroll-top--3 {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  display: block;
+  z-index: 999;
+  transition: all .5s ease-in-out;
+  animation: hoverWave linear 1s infinite;
+  
+}
+.scroll-top--3 svg {
+  padding: 5px;
+  border: 2px solid #ffffff;
+  border-radius: 100%;
+  height: 50px;
+  background: var(--main);
+  transition: background .3s; 
+  animation: shake23 1200ms ease infinite; 
+}
+
+.is_active {
+  opacity: 1;
+  visibility: visible;
+
+}
+
+.is_hidden {
+  display: none;
+}
+
+.scroll-top svg path {
+  fill: var(--main);
+}
+
+.scroll-top--2 svg path {
+  fill: var(--main);
+}
+
+.scroll-top--2 svg {
+  border: 2px solid #fff;
+  border-radius: 100%;
+}
+
+
+.scroll-top:hover, .scroll-top--2:hover {
+  scale: 1.1;
 }
 
 .header-fix {

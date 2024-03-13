@@ -145,7 +145,7 @@ return $avatar_defaults;
 
 
 function flare_scripts() {
-		wp_enqueue_style( 'flare-style', get_stylesheet_uri(),'','4.9.8' );
+		wp_enqueue_style( 'flare-style', get_stylesheet_uri(),'','5.7.8' );
 		/*google fonts*/
 		wp_enqueue_style( 'flare-google-fonts', '//fonts.googleapis.com/css?family=Merriweather:300,300italic,400,400italic,700,700italic');
 
@@ -238,6 +238,16 @@ function flare_featured_home_main_slider() {
 
 	?>
 		<div class="main-slider">
+		<div class="item"
+				style="background-image: url('https://primasnabauto.ru/wp-content/themes/flare/assets/img/main__slide_1.png');">
+				<div class="carousel-caption wow fadeInUp">
+					<h1>Заказ авто из Японии, Кореи и Китая</h1>
+					<p>Автомобили под заказ: из Японии, Кореи, Китая. <br> Мы купим и привезём любой авто, в том числе санкционный.</p>
+					<a class="carousel-caption__btn" href="https://wa.me/+79146867878">
+						Связаться </a>
+				</div>
+			</div>
+
 			<div class="item"
 				style="background-image: url('https://primasnabauto.ru/wp-content/themes/flare/assets/img/main_slide.png');">
 				<div class="carousel-caption wow fadeInUp">
